@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>エコキュートLP サンプル2案</title>
+  <title>エコキュートLP サンプル3案</title>
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,12 +34,15 @@
     .notes h2 { margin: 0 0 8px; font-size: 17px; }
     .notes ul { margin: 0; padding-left: 1.2em; color: var(--sub); }
     @media (min-width: 760px) { .plans { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { main { width: min(1200px, 100% - 32px); } .plans { grid-template-columns: repeat(3, 1fr); } }
+    .thumb-c { padding: 0; display: block; }
+    .thumb-c img { width: 100%; height: 180px; object-fit: cover; display: block; }
   </style>
 </head>
 <body>
 <main>
-  <h1>エコキュート交換LP　サンプル2案</h1>
-  <p class="lead">どちらも「補助金」を軸に、見積もり依頼と電話での問い合わせだけをゴールにしています。スマホでの表示を優先して作っています。</p>
+  <h1>エコキュート交換LP　サンプル3案</h1>
+  <p class="lead">3案とも「補助金」を軸に、見積もり依頼と電話での問い合わせだけをゴールにしています。スマホでの表示を優先して作っています。</p>
 
   <div class="plans">
     <a class="plan" href="a-standard/">
@@ -66,6 +69,19 @@
           <li>施工事例の横スクロール</li>
         </ul>
         <span class="open">B案を見る</span>
+      </div>
+    </a>
+    <a class="plan" href="c-existing/">
+      <div class="thumb thumb-c"><img src="c-existing/img/hero-sp.webp" alt="" width="800" height="533"></div>
+      <div class="body">
+        <h2>C案　写真入り・広告出し分け対応</h2>
+        <p>制作案（ecocute_lp_plan.md）をもとにした構成です。イメージ写真と施工前後の比較を使い、実際のサイトに近い見た目で確認できます。</p>
+        <ul>
+          <li>広告グループごとにファーストビューを切り替え（補助金／価格／故障）</li>
+          <li>商品・価格・施工事例（Before / After）</li>
+          <li>フォーム送信先を設定すれば、そのまま本番運用できる作り</li>
+        </ul>
+        <span class="open">C案を見る</span>
       </div>
     </a>
   </div>
