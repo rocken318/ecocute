@@ -181,7 +181,8 @@ button { font: inherit; }
 .fv__circle strong { font-family: Oswald, sans-serif; font-size: 2.4em; line-height: 1; }
 .fv__circle--sp { left: auto; right: 8px; top: auto; bottom: -18px; width: 96px; font-size: 11px; }
 .fv__circle--sp span { display: block; }
-.fv__circle--sp strong { font-size: 2.2em; }
+.fv__circle--sp strong { font-size: 1.8em; }
+.fv__circle--sp { width: 104px; font-size: 10px; letter-spacing: -.02em; }
 .fv__note { font-size: 11px; color: var(--muted); margin-top: 20px; }
 
 /* 故障系：電話を強調 */
@@ -264,6 +265,8 @@ button { font: inherit; }
   aspect-ratio: 4/3; background: repeating-linear-gradient(45deg, #f1f5f9 0 10px, #e9eff5 10px 20px);
   border-radius: 8px; display: grid; place-items: center; color: #94a3b8; font-size: 13px; margin-bottom: 12px;
 }
+.product__img:has(img) { aspect-ratio: 3/2; background: #eef3f8; overflow: hidden; }
+.product__img img { width: 100%; height: 100%; object-fit: cover; }
 .product__maker { font-size: 13px; color: var(--muted); font-weight: 700; }
 .product__name { font-size: 18px; font-weight: 900; color: var(--blue-dark); line-height: 1.4; }
 .product__name small { display: block; font-size: 12px; font-weight: 500; color: var(--muted); }
@@ -319,6 +322,7 @@ button { font: inherit; }
 .case__photos { display: grid; grid-template-columns: 1fr 1fr; }
 .case__photos figure { position: relative; }
 .case__ph { aspect-ratio: 4/3; background: repeating-linear-gradient(45deg, #f1f5f9 0 10px, #e9eff5 10px 20px); display: grid; place-items: center; color: #94a3b8; font-size: 12px; }
+img.case__ph { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; }
 .case__label { position: absolute; left: 8px; top: 8px; background: #64748b; color: var(--white); font-family: Oswald, sans-serif; font-size: 12px; padding: 0 10px; border-radius: 4px; }
 .case__label--after { background: var(--cta); }
 .case__body { padding: 20px; }

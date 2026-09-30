@@ -3,15 +3,15 @@
  * HTML内の data-cfg="キー" の要素にテキストが、data-cfg-href="tel" のリンクに電話番号が入ります。
  */
 window.LP_CONFIG = {
-  company: '【会社名】',
-  tel: '0000000000',            // 発信用（ハイフンなし）
-  telDisplay: 'XXX-XXXX-XXXX',  // 表示用
-  hours: 'XX:XX〜XX:XX',
-  holiday: '定休日：XX',
-  area: '○○県全域・○○市周辺',
-  address: '〒XXX-XXXX ○○県○○市○○',
-  warranty: '工事保証 XX年',
-  license: '第二種電気工事士 / 給水装置工事主任技術者 など',
+  company: 'あおぞら住設株式会社',
+  tel: '0120000000',            // 発信用（ハイフンなし）
+  telDisplay: '0120-000-000',  // 表示用
+  hours: '9:00〜19:00',
+  holiday: '年中無休',
+  area: '東京都・神奈川県・埼玉県・千葉県',
+  address: '〒100-0000 東京都みどり区あおぞら町1-2-3',
+  warranty: '工事保証10年',
+  license: '第二種電気工事士 / 給水装置工事主任技術者 / 液化石油ガス設備士',
 
   // フォーム送信先（空のときはデモ動作：送信せずサンクス表示）
   // 例: 'https://formspree.io/f/xxxxxxx'
@@ -29,7 +29,7 @@ window.LP_VARIANTS = {
   // B. 交換・価格系
   price: {
     eyebrow: 'エコキュート交換 工事費込み',
-    title: 'コミコミ価格<br><span class="fv__big"><strong>XX</strong><em>万円〜</em></span>',
+    title: 'コミコミ価格<br><span class="fv__big"><strong>39.8</strong><em>万円〜</em></span>',
     lead: '本体・工事・撤去・処分まで全部込み。追加料金の不安なし。',
     sub: '<mark>さらに補助金で最大10万円/台<br class="sp">お得になります。</mark>',
     cta: '工事費込みの交換価格を無料で確認する',
