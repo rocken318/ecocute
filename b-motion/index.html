@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ja" data-variant="b-motion">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>夜のうちに、お湯をつくる。エコキュート交換｜サンプル電設</title>
+  <meta name="description" content="〇〇市・近隣エリアのエコキュート交換。国の補助金（給湯省エネ2026事業）で最大14万円。見積もり無料・補助金申請も代行します。">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="../shared/site-config.js"></script>
+  <script src="../shared/tracking.js"></script>
+  <script src="../shared/lead-form.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#top" data-site="companyName">サンプル電設</a>
+  <nav class="header-nav" aria-label="ページ内リンク">
+    <a href="#subsidy">補助金</a>
+    <a href="#simulator">電気代シミュレーション</a>
+    <a href="#price">料金</a>
+    <a class="header-cta" href="#form">無料見積もり</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- 夜：ファーストビュー -->
+  <section class="hero">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="hero-area"><span data-site="area">〇〇市・近隣エリア</span>のエコキュート交換</p>
+      <h1 class="hero-title">
+        <span class="line"><span>夜のうちに、</span></span>
+        <span class="line"><span>お湯をつくる。</span></span>
+      </h1>
+      <p class="hero-lead">空気の熱と深夜の電気で、朝までに家族ぶんのお湯を沸かしておく。<br>エコキュートに替えるだけで、給湯の電気代は約3分の1になります。</p>
+      <div class="hero-subsidy">
+        <span>国の補助金で</span>
+        <strong>最大<b data-site="subsidyMax">14</b>万円</strong>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#form">無料で見積もりを依頼する</a>
+        <a class="btn btn-ghost" href="tel:0120000000" data-site-tel data-pos="hero">電話で相談する</a>
+      </div>
+    </div>
+    <p class="scroll-hint" aria-hidden="true">スクロールで朝まで</p>
+  </section>
+
+  <!-- 深夜：仕組み（スクロールでタンクが満ちる） -->
+  <section class="night-story" id="story">
+    <div class="story-pin">
+      <div class="story-visual" aria-hidden="true">
+        <p class="story-clock"><span class="clock-time">7:00</span></p>
+        <svg class="tank" viewBox="0 0 160 300">
+          <defs>
+            <linearGradient id="water" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#ff8a3d"/>
+              <stop offset="1" stop-color="#ffcf9a"/>
+            </linearGradient>
+            <clipPath id="tank-clip"><rect x="14" y="14" width="132" height="272" rx="22"/></clipPath>
+          </defs>
+          <rect x="6" y="6" width="148" height="288" rx="28" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="3"/>
+          <g clip-path="url(#tank-clip)">
+            <rect class="tank-water" x="14" y="14" width="132" height="272" fill="url(#water)"/>
+          </g>
+        </svg>
+        <p class="tank-label"><span class="tank-percent">100</span>%</p>
+      </div>
+      <ol class="story-steps">
+        <li class="is-active">
+          <p class="step-time">23:00</p>
+          <h2>電気が安くなる時間に、沸かしはじめる</h2>
+          <p>夜間の割安な電気料金プランに合わせて、自動で運転を始めます。</p>
+        </li>
+        <li>
+          <p class="step-time">2:00</p>
+          <h2>外の空気から、熱を集める</h2>
+          <p>ヒートポンプが空気の熱をくみ上げるので、使う電気は従来の電気温水器の約3分の1です。</p>
+        </li>
+        <li>
+          <p class="step-time">7:00</p>
+          <h2>朝には、家族ぶんのお湯がたっぷり</h2>
+          <p>370Lのタンクで3〜4人家族の1日分。貯めたお湯は、断水や停電のときの生活用水にもなります。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 夜明け前：補助金 -->
+  <section class="subsidy" id="subsidy">
+    <div class="wrap">
+      <h2 class="section-title">交換費用は、国の補助金で<br>最大<span class="count" data-count-to="14">14</span>万円おさえられます</h2>
+      <p class="section-lead">給湯省エネ2026事業の対象機種に交換すると、1台あたり次の金額が補助されます。</p>
+      <div class="subsidy-grid">
+        <div class="subsidy-item">
+          <p>対象のエコキュート</p>
+          <strong><span data-site="subsidyBase">7</span><small>万円</small></strong>
+        </div>
+        <div class="subsidy-item">
+          <p>性能要件を満たす機種</p>
+          <strong><span data-site="subsidyUpper">10</span><small>万円</small></strong>
+        </div>
+        <div class="subsidy-item is-plus">
+          <p>電気温水器・蓄熱暖房機の撤去</p>
+          <strong>＋<span data-site="subsidyRemoval">4</span><small>万円</small></strong>
+        </div>
+      </div>
+      <p class="subsidy-support">補助金は登録事業者しか申請できないため、手続きはすべて当社が代行します。</p>
+      <p class="fine">※予算の上限に達すると受付が終了します。受付状況はお問い合わせ時にお伝えします（<span data-site="asOf">2026年9月時点</span>の制度内容）。</p>
+    </div>
+  </section>
+
+  <!-- 夜明け：シミュレーター -->
+  <section class="simulator" id="simulator">
+    <div class="wrap">
+      <h2 class="section-title">あなたの家だと、電気代はいくら下がる？</h2>
+      <div class="sim-card">
+        <form class="sim-form" aria-label="電気代シミュレーション">
+          <fieldset>
+            <legend>今の給湯器</legend>
+            <div class="seg">
+              <label><input type="radio" name="sim_heater" value="electric" checked><span>電気温水器</span></label>
+              <label><input type="radio" name="sim_heater" value="gas"><span>ガス</span></label>
+              <label><input type="radio" name="sim_heater" value="oil"><span>石油</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>家族の人数</legend>
+            <div class="seg">
+              <label><input type="radio" name="sim_family" value="2"><span>1〜2人</span></label>
+              <label><input type="radio" name="sim_family" value="4" checked><span>3〜4人</span></label>
+              <label><input type="radio" name="sim_family" value="6"><span>5人以上</span></label>
+            </div>
+          </fieldset>
+        </form>
+        <div class="sim-result" aria-live="polite">
+          <p>年間の光熱費が、およそ</p>
+          <p class="sim-yearly"><b class="sim-num" data-sim="yearly">62,000</b><span>円</span>おトク</p>
+          <p class="sim-ten">10年で約 <b data-sim="ten">620,000</b>円</p>
+          <div class="sim-bars" aria-hidden="true">
+            <span class="sim-bar before"></span>
+            <span class="sim-bar after"></span>
+          </div>
+        </div>
+      </div>
+      <p class="fine">※サンプル試算です。370L〜460Lのエコキュートと夜間割安プランを想定しています。実際の金額はご家庭の使い方や料金プランで変わります。</p>
+      <div class="cta-center">
+        <a class="btn btn-primary" href="#form">わが家の見積もりを依頼する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 朝：選ばれる理由 -->
+  <section class="reasons">
+    <div class="wrap">
+      <h2 class="section-title"><span data-site="companyName">サンプル電設</span>に任せる理由</h2>
+      <div class="reason-grid">
+        <div>
+          <h3>地元の電気工事士が直接施工</h3>
+          <p>下請けに回さないので、中間マージンがかかりません。</p>
+        </div>
+        <div>
+          <h3>お湯が出ないときは最短翌日</h3>
+          <p>主要メーカーの在庫を常に確保しています。</p>
+        </div>
+        <div>
+          <h3>工事保証10年・追加費用なし</h3>
+          <p>見積もり後の追加請求はありません。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金 -->
+  <section class="price" id="price">
+    <div class="wrap">
+      <h2 class="section-title">工事費込みの料金目安</h2>
+      <p class="section-lead">本体・標準工事・古い給湯器の処分費をすべて含んでいます。</p>
+      <div class="price-grid">
+        <article class="price-item">
+          <h3>給湯専用 370L</h3>
+          <p class="price-for">3〜4人家族・シンプルな機能</p>
+          <p class="price-value"><b>298,000</b>円〜</p>
+          <p class="price-after">補助金適用で実質 228,000円〜</p>
+        </article>
+        <article class="price-item is-popular">
+          <p class="price-tag">いちばん選ばれています</p>
+          <h3>フルオート 370L</h3>
+          <p class="price-for">3〜4人家族・自動お湯はり・追いだき</p>
+          <p class="price-value"><b>388,000</b>円〜</p>
+          <p class="price-after">補助金適用で実質 318,000円〜</p>
+        </article>
+        <article class="price-item">
+          <h3>フルオート 460L</h3>
+          <p class="price-for">4〜7人家族・お湯切れしにくい大容量</p>
+          <p class="price-value"><b>448,000</b>円〜</p>
+          <p class="price-after">補助金適用で実質 378,000円〜</p>
+        </article>
+      </div>
+      <p class="fine">※サンプル価格（税込）です。実質価格は基本額7万円の補助金を適用した場合の目安です。</p>
+    </div>
+  </section>
+
+  <!-- 施工事例（横スクロール） -->
+  <section class="cases" id="cases">
+    <div class="cases-head wrap">
+      <h2 class="section-title">施工事例</h2>
+    </div>
+    <div class="cases-track">
+      <article class="case">
+        <div class="case-photo" aria-hidden="true"><span>施工写真</span></div>
+        <p class="case-from">電気温水器 → フルオート370L</p>
+        <h3>「毎月の電気代が、目に見えて下がりました」</h3>
+        <p class="case-who">〇〇市 K様邸</p>
+      </article>
+      <article class="case">
+        <div class="case-photo" aria-hidden="true"><span>施工写真</span></div>
+        <p class="case-from">エコキュート（15年使用）→ フルオート460L</p>
+        <h3>「お湯が出なくなった翌日に交換してもらえました」</h3>
+        <p class="case-who">〇〇町 S様邸</p>
+      </article>
+      <article class="case">
+        <div class="case-photo" aria-hidden="true"><span>施工写真</span></div>
+        <p class="case-from">ガス給湯器 → 給湯専用370L</p>
+        <h3>「火を使わないので、高齢の母も安心です」</h3>
+        <p class="case-who">〇〇市 M様邸</p>
+      </article>
+      <article class="case">
+        <div class="case-photo" aria-hidden="true"><span>施工写真</span></div>
+        <p class="case-from">電気温水器 → おひさまエコキュート370L</p>
+        <h3>「補助金の手続きを全部任せられて助かりました」</h3>
+        <p class="case-who">〇〇市 T様邸</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 流れ・FAQ -->
+  <section class="flow-faq">
+    <div class="wrap flow-faq-grid">
+      <div>
+        <h2 class="section-title align-left">交換までの流れ</h2>
+        <ol class="flow">
+          <li><b>お問い合わせ</b>フォームかお電話で</li>
+          <li><b>現地調査・お見積もり</b>補助金を含めた金額をご提示</li>
+          <li><b>ご契約・補助金申請</b>申請は当社が代行</li>
+          <li><b>交換工事</b>半日〜1日、当日の夜からお湯が使えます</li>
+        </ol>
+      </div>
+      <div>
+        <h2 class="section-title align-left">よくあるご質問</h2>
+        <div class="faq">
+          <details>
+            <summary>見積もりだけでも大丈夫ですか？</summary>
+            <p>はい。見積もりと現地調査は無料で、ご契約いただかなくても費用はかかりません。</p>
+          </details>
+          <details>
+            <summary>補助金は必ずもらえますか？</summary>
+            <p>対象機種で国の予算が残っていれば受け取れます。受付状況はお問い合わせ時にお伝えします。</p>
+          </details>
+          <details>
+            <summary>ガス給湯器からでも交換できますか？</summary>
+            <p>できます。専用の電気配線工事が必要なため、現地調査で設置場所と分電盤を確認します。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フォーム -->
+  <section class="form-section" id="form">
+    <div class="wrap form-wrap">
+      <h2 class="section-title">無料見積もりのご依頼</h2>
+      <p class="section-lead">3つの質問に答えるだけ。担当者から折り返しご連絡します。</p>
+
+      <form class="lead-form" data-lead-form novalidate>
+        <div class="progress" data-progress role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" aria-label="入力の進み具合">
+          <span class="progress-bar"></span>
+          <span class="progress-label" data-progress-label>1 / 3</span>
+        </div>
+
+        <fieldset data-step data-auto-next>
+          <legend>今お使いの給湯器は？</legend>
+          <div class="choice-grid">
+            <label><input type="radio" name="current_heater" value="電気温水器" required><span>電気温水器</span></label>
+            <label><input type="radio" name="current_heater" value="エコキュート"><span>エコキュート</span></label>
+            <label><input type="radio" name="current_heater" value="ガス給湯器"><span>ガス給湯器</span></label>
+            <label><input type="radio" name="current_heater" value="石油給湯器"><span>石油給湯器</span></label>
+            <label class="wide"><input type="radio" name="current_heater" value="わからない"><span>わからない</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset data-step data-auto-next hidden>
+          <legend>交換したい時期は？</legend>
+          <div class="choice-grid">
+            <label class="wide"><input type="radio" name="timing" value="故障してお湯が使えない" required><span>故障してお湯が使えない</span></label>
+            <label><input type="radio" name="timing" value="1か月以内"><span>1か月以内</span></label>
+            <label><input type="radio" name="timing" value="3か月以内"><span>3か月以内</span></label>
+            <label class="wide"><input type="radio" name="timing" value="まずは費用を知りたい"><span>まずは費用を知りたい</span></label>
+          </div>
+          <button class="btn-back" type="button" data-back>戻る</button>
+        </fieldset>
+
+        <fieldset data-step hidden>
+          <legend>ご連絡先を教えてください</legend>
+          <label class="field">
+            <span>お名前</span>
+            <input type="text" name="name" autocomplete="name" required placeholder="例）山田 太郎">
+          </label>
+          <label class="field">
+            <span>電話番号</span>
+            <input type="tel" name="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9\-]{10,13}" placeholder="例）090-1234-5678">
+          </label>
+          <label class="field">
+            <span>郵便番号</span>
+            <input type="text" name="zip" autocomplete="postal-code" inputmode="numeric" required pattern="[0-9\-]{7,8}" placeholder="例）123-4567">
+          </label>
+          <button class="btn btn-primary btn-submit" type="submit">この内容で見積もりを依頼する</button>
+          <button class="btn-back" type="button" data-back>戻る</button>
+          <p class="fine">すべて必須です。送信いただいた情報は、お見積もりのご連絡にのみ使用します。</p>
+        </fieldset>
+      </form>
+
+      <div class="form-done" data-done hidden>
+        <h3>見積もりのご依頼を受け付けました</h3>
+        <p>担当者から1営業日以内にお電話します。</p>
+        <p class="fine">※これはサンプルページのため、実際には送信されていません。</p>
+      </div>
+
+      <p class="form-alt">お電話でも受け付けています　<a href="tel:0120000000" data-site-tel data-pos="form"><span data-site="phone">0120-000-000</span></a><br>
+        <small data-site="hours">8:00〜20:00（土日祝も受付）</small><br>
+        <a class="line-link" href="#line" data-site-line data-pos="form">LINEで気軽に質問する</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p><span data-site="companyName">サンプル電設</span>｜対応エリア：<span data-site="area">〇〇市・近隣エリア</span></p>
+  <p class="fine">※このページは提案用のサンプルです。会社情報・価格・事例はすべて仮のものです。</p>
+</footer>
+
+<nav class="sticky-cta" aria-label="お問い合わせ">
+  <a class="sticky-tel" href="tel:0120000000" data-site-tel data-pos="sticky">電話する</a>
+  <a class="sticky-form" href="#form">無料見積もり</a>
+</nav>
+
+</body>
+</html>

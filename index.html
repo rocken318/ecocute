@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>エコキュートLP サンプル2案</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #16213a; --sub: #56627a; --line: #dde3ec; --bg: #f5f7fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Noto Sans JP", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.8; }
+    main { width: min(960px, 100% - 32px); margin: 0 auto; padding: 56px 0 80px; }
+    h1 { font-size: clamp(24px, 5vw, 34px); font-weight: 900; margin: 0; line-height: 1.4; }
+    .lead { color: var(--sub); margin: 12px 0 0; }
+    .plans { display: grid; gap: 20px; margin-top: 40px; }
+    .plan { display: block; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; color: inherit; text-decoration: none; transition: border-color .2s; }
+    .plan:hover { border-color: var(--ink); }
+    .plan:focus-visible { outline: 3px solid #1c5fb0; outline-offset: 3px; }
+    .thumb { height: 180px; display: grid; place-content: center; text-align: center; padding: 16px; }
+    .thumb-a { background: #eef4fb; color: #14263d; }
+    .thumb-a strong { font-size: 24px; font-weight: 900; }
+    .thumb-a b { color: #d9580b; font-size: 34px; background: linear-gradient(transparent 60%, #ffe45c 60%); }
+    .thumb-b { background: linear-gradient(180deg, #0b1533, #4a3470 70%, #f3b98a); color: #fff; font-family: serif; }
+    .thumb-b strong { font-size: 30px; letter-spacing: .04em; }
+    .body { padding: 20px 24px 24px; }
+    .body h2 { margin: 0; font-size: 20px; }
+    .body p { margin: 8px 0 0; color: var(--sub); font-size: 15px; }
+    .body ul { margin: 12px 0 0; padding-left: 1.2em; color: var(--sub); font-size: 14px; }
+    .open { display: inline-block; margin-top: 16px; font-weight: 700; text-decoration: underline; }
+    .notes { margin-top: 48px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 24px; font-size: 14px; }
+    .notes h2 { margin: 0 0 8px; font-size: 17px; }
+    .notes ul { margin: 0; padding-left: 1.2em; color: var(--sub); }
+    @media (min-width: 760px) { .plans { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>エコキュート交換LP　サンプル2案</h1>
+  <p class="lead">どちらも「補助金」を軸に、見積もり依頼と電話での問い合わせだけをゴールにしています。スマホでの表示を優先して作っています。</p>
+
+  <div class="plans">
+    <a class="plan" href="a-standard/">
+      <div class="thumb thumb-a"><strong>補助金で<br>最大<b>14</b>万円</strong></div>
+      <div class="body">
+        <h2>A案　王道・成約重視</h2>
+        <p>広告から来た人が迷わず問い合わせできる、情報の分かりやすさ優先の構成です。</p>
+        <ul>
+          <li>表示が速く、読みやすいシンプルな作り</li>
+          <li>補助金・料金・施工の流れをひと目で確認できる</li>
+          <li>画面下に電話・見積もりボタンを常に表示</li>
+        </ul>
+        <span class="open">A案を見る</span>
+      </div>
+    </a>
+    <a class="plan" href="b-motion/">
+      <div class="thumb thumb-b"><strong>夜のうちに、<br>お湯をつくる。</strong></div>
+      <div class="body">
+        <h2>B案　動きのある先進的なデザイン</h2>
+        <p>スクロールに合わせて夜から朝へ空が明けていき、エコキュートの仕組みを体験として伝えます。</p>
+        <ul>
+          <li>スクロールで時計が進み、タンクにお湯が満ちていく演出</li>
+          <li>家族の人数を選ぶと削減額が動く電気代シミュレーター</li>
+          <li>施工事例の横スクロール</li>
+        </ul>
+        <span class="open">B案を見る</span>
+      </div>
+    </a>
+  </div>
+
+  <section class="notes">
+    <h2>このサンプルについて</h2>
+    <ul>
+      <li>会社名・エリア・電話番号・価格・施工事例はすべて仮のものです。</li>
+      <li>補助金の金額は給湯省エネ2026事業（2026年9月時点）の内容です。予算の上限に達すると受付が終わるため、公開前に再確認します。</li>
+      <li>問い合わせとして計測するのはフォーム送信と電話タップだけです。LINEへのリンクは別のイベントとして記録し、問い合わせ数には含めません。</li>
+      <li>フォームはサンプルのため、実際には送信されません。</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
